@@ -5,6 +5,7 @@ var level = 0;
 var started = false;
 var high = false;
 var highscore = 0;
+var img=false;
 
 $(document).keypress(function () {
   if (!started) {
@@ -108,11 +109,27 @@ $('.img').click(function () {
 });
 
 function hint() {
+  if(!img){
   $('video').removeClass('none');
   $('video').addClass('hint');
-  video();
+  img=true;
+  videoPlay();
+  }
+  else{
+  $('video').addClass('none');
+  $('video').removeClass('hint');
+  img=false;
+  videoStop();
+  }
+
 }
-function video() {
-  let vid = $('video');
+function videoPlay() {
+  let vid =document.querySelector("video");
   vid.play();
+}
+
+function videoStop(){
+  let vid =document.querySelector("video");
+  vid.pause();
+  vid.currentTime=0;
 }
