@@ -1,20 +1,38 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #011f3f;
+}
+.hint {
+  position: absolute;
+  margin-left: -30%;
+  margin-top: -1%;;
+}
+
+.none {
+  display: none;
+}
+.img {
+  position: absolute;
+  margin-left: -40%;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+  margin: 5%;
+  color: #fef2bf;
+}
+.high-score {
+  display: none;
+  color: white;
+  text-align: right;
+  font-size: 40px;
 }
 
 .container {
   display: block;
   width: 50%;
   margin: auto;
-
 }
 
 .btn {
